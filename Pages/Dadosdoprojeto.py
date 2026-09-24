@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import pandas as pd
 import streamlit as st
 import plotly.express as px
@@ -13,7 +15,8 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-st.sidebar.image(r"C:\Users\odylo\Desktop\PIBIC CLARA\imagem\logomarca.png", caption="AnalisaMed")
+LOGO_PATH = Path(__file__).resolve().parent.parent / "imagem" / "logomarca.png"
+st.sidebar.image(str(LOGO_PATH), caption="AnalisaMed")
 st.sidebar.write("Odylon Kleber Pereira de Souza")
 st.sidebar.write("© 2026 AnalisaMed. Todos os direitos reservados.")
 
